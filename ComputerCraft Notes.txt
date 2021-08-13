@@ -1,0 +1,31 @@
+data from get<whatever it was>
+
+
+
+elements start at 1, so if count/length = 3 then entries are 1, 2, and 3
+
+each entry has
+    stack
+        item <item table>
+            count <number>
+            displayName <string>
+            maxCount <number>
+            name <string>
+            tags <table>
+
+        ## see a[1].stack.item.name for instance
+
+    pattern
+        inputs <array of 9 item table entries: a[1].pattern[1].name>
+        fluidInputs <9 entries of unknown table>
+        processing <boolean>
+        fluidOutputs <unknown table>
+        outputs <item table>
+    quantity <number>
+
+a = refinedstorage.getTasks()
+for k,v in pairs(a[1]) do print(k,v) end
+a[1].stack.item.name
+a[1].pattern.inputs[5].name
+
+all 9 entries of arrays above (inputs and fluidInputs) do not have to have values, represent the 3x3 grid slots
